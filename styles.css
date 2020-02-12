@@ -37,7 +37,7 @@ nav ul li {
     font-weight: bold;
 }
 nav ul li:hover {
-    border-bottom-color: #01CACD;
+    border-bottom-color: #000000;
     background: #F4F4F4;
 }
 a {
@@ -46,7 +46,7 @@ a {
     transition: color 0.5s;
 }
 a:hover {
-    color: #01CACD;
+    color: #000000;
 }
 
 /* collapse navbar */
@@ -72,7 +72,7 @@ a:hover {
     left: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
     .collapse-navbar, .dropdown-btn {
         display: initial;
     }
