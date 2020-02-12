@@ -1,4 +1,8 @@
 /* CSS Document */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
 
 /* navbar */
 .navbar h1 {
@@ -66,4 +70,13 @@ a:hover {
     width: 100%;
     top: 50px;
     left: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .collapse-navbar, .dropdown-btn {
+        display: initial;
+    }
+    .expand-navbar {
+        display: none;
+    }
 }
