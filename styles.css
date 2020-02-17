@@ -74,11 +74,12 @@ a:hover {
 /* footer */
 footer {
     box-shadow: 0 0 10px #bbbbbb;
+    color: #6d6d6d;
 }
 .copyright {
     display: flex;
     float: left;
-    margin: 20px 40px;
+    margin: 20px 0 20px 40px;
 }
 .footer-logo {
     margin-right: 20px;
@@ -86,12 +87,19 @@ footer {
     height: 40px;
 }
 .footer-links {
-    margin: 36px 40px 20px;
+    margin: 36px 2% 20px;
+    width: 25%;
+    max-width: 250px;
     float: right;
     display: flex;
 }
 .footer-links a {
-    margin-left: 20px;
+    margin: 0 auto;
+    color: #6d6d6d;
+    transition: none;
+}
+.footer-links a:hover {
+    color: #000000;
 }
 .footer-social-section {
     float: right;
@@ -119,7 +127,19 @@ footer {
     /* footer */
     .copyright {
         float: none;
-        width: 350px;
+        width: 90%;
+        max-width: 370px;
+        margin: 20px auto;
+    }
+    .footer-links {
+        float: none;
+        width: 90%;
+        max-width: 220px;
+        margin: 20px auto 30px;
+    }
+    .footer-social-section {
+        float: none;
+        width: 100px;
         margin: 20px auto;
     }
 }
