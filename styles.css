@@ -6,19 +6,21 @@ body {
 
 /* content */
 .content-contact {
-    position: fixed;
+    width: 80%;
+    margin: 100px auto;
 }
 .content-contact h1 {
     font-size: 50px;
     text-align: center;
-    margin-top: 100px;
 }
 .content-contact img {
-    margin: 0 20px 0 200px;
+    margin: 0 20px 20px 0;
     float: left;
 }
+.contact-info {
+    float: right;
+}
 .content-contact p {
-    margin-right: 200px;
     font-size: 17px;
     line-height: 1.3;
 }
