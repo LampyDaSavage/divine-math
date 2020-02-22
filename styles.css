@@ -17,12 +17,10 @@ body {
     margin: 0 20px 20px 0;
     float: left;
 }
-.contact-info {
-    float: right;
-}
 .content-contact p {
     font-size: 17px;
     line-height: 1.3;
+    margin-bottom: 40px;
 }
 
 /* navbar */
@@ -96,6 +94,7 @@ a:hover {
 footer {
     box-shadow: 0 0 10px #bbbbbb;
     color: #6d6d6d;
+    overflow: auto;
 }
 .copyright {
     display: flex;
