@@ -26,6 +26,34 @@ body {
     width: 80%;
     margin: 100px auto;
 }
+.btn {
+    background-color: #0059ff;
+    transition: background-color 0.5s;
+    padding: 12px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12pt;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    color: #ffffff;
+}
+.btn:hover {
+    background-color: #0099ff;
+}
+.btn:focus {
+    outline: none;
+}
+.btn:active {
+    padding: 11px 19px;
+    margin: 6px;
+}
+input[type=number] {
+    text-align: center;
+    padding: 5px;
+    font-size: 11pt;
+    font-weight: bold;
+    width: 100px;
+}
 
 .contact p {
     font-size: 19px;

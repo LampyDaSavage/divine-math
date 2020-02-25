@@ -31,12 +31,13 @@
         </div>
         <div class="content" style="text-align: center">
             <h1>Distance Formula</h1>
-            <h3>First Coordinate</h3>
-            <p>( <input type="number" id="x1"> , <input type="number" id="y1"> )</p>
-            <h3>Second Coordinate</h3>
-            <p>( <input type="number" id="x2"> , <input type="number" id="y2"> )</p>
-            <input type="submit" onclick="distance()" class="btn">
-            <input type="reset" onclick="clearDistance()" class="btn">
+            <h3>1<sup>st</sup> Coordinate</h3>
+            <p style="font-weight: bold">( <input type="number" id="x1"> , <input type="number" id="y1"> )</p>
+            <h3>2<sup>nd</sup> Coordinate</h3>
+            <p style="font-weight: bold">( <input type="number" id="x2"> , <input type="number" id="y2"> )</p>
+            <input type="submit" value="Enter" onclick="distance()" class="btn">
+            <input type="reset" value="Clear" onclick="clearDistance()" class="btn">
+            <br/><br/>
             <h3 id="distance-solution"></h3>
         </div>
         <!--Style on footer is temporary so that it appears at the bottom when the content section is empty or does not take up enough space (remove styling once content takes up more space than viewport and scolling is enabled)-->
