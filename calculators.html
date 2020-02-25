@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Divine Math - Calculators</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html"><img src="images/text-logo.png" alt="Divine Math" class="nav-logo"></a>
+            <nav class="expand-navbar">
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="#"><li>Calculator</li></a>
+                    <!--<a href="#"><li>Videos</li></a>
+                    <a href="#"><li>Donate</li></a>-->
+                </ul>
+            </nav>
+            <nav class="collapse-navbar">
+                <img src="images/dropdown-btn.png" alt="Menu" onclick="showHideNav()" class="dropdown-btn">
+                <ul class="nav-dropdown" id="nav-dropdown">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="#"><li>Calculator</li></a>
+                    <!--<a href="#"><li>Videos</li></a>
+                    <a href="#"><li>Donate</li></a>-->
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>Calculators</h1>
+            <a href="parametrics.html" class="calculator-link">
+                <h3>Parametric Equations</h3>
+                <!--<img src="#" alt="Parametric Equations" class="calculator-img">-->
+            </a>
+            <a href="pythagorean.html" class="calculator-link">
+                <h3>Pythagorean Theorem</h3>
+                <!--<img src="#" alt="Pythagorean Theorem" class="calculator-img">-->
+            </a>
+            <a href="distance.html" class="calculator-link">
+                <h3>Distance Formula</h3>
+                <!--<img src="#" alt="Distance Formula" class="calculator-img">-->
+            </a>
+        </div>
+        <!--Style on footer is temporary so that it appears at the bottom when the content section is empty or does not take up enough space (remove styling once content takes up more space than viewport and scolling is enabled)-->
+        <footer style="position: fixed; bottom: 0; width: 100%">
+            <div class="copyright">
+                <img src="images/logo.png" alt="Divine Math" class="footer-logo">
+                <p>Copyright &copy; 2020 Sutantu Balamurugan</p>
+            </div>
+            <div class="footer-social-section">
+				<a href="https://discord.gg/cBeDMSD" target="_blank"><img src="images/discord-logo.png" alt="Discord" class="footer-social"></a>
+				<a href="https://www.instagram.com/divine_math/" target="_blank"><img src="images/instagram-logo.png" target="_blank" alt="Instagram" class="footer-social"></a>
+				<a href="https://twitter.com/math_is_divine" target="_blank"><img src="images/twitter-logo.png" target="_blank" alt="Twitter" class="footer-social"></a>
+				<!--<a href="#" target="_blank"><img src="images/facebook-logo.png" target="_blank" alt="Facebook" class="footer-social"></a>-->
+			</div>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
