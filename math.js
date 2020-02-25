@@ -11,9 +11,6 @@ function pythag(a,b,c) {
         return Math.sqrt(c);
     }
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 //Pre-Calculus Multistep Functions
 function parametric(x1,y1,x2,y2,t) {
     b = (x2-x1)/t;
@@ -51,9 +48,7 @@ function parametric(x1,y1,x2,y2,t) {
         ftd = '-t';
     }
     return '(' + x1 + b + ftb + ', ' + y1 + d + ftd + ')';
-=======
-=======
->>>>>>> bcc3b41b81772487a28960823c93a61232f696a9
+
 //distance formula
 function distance() {
     var x1, x2, y1, y2;
@@ -61,9 +56,7 @@ function distance() {
     x2 = document.getElementById('x2').value;
     y1 = document.getElementById('y1').value;
     y2 = document.getElementById('y2').value;
-<<<<<<< HEAD
     document.getElementById('distance-solution').innerHTML = Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
-=======
     if(x1 === '' || x2 === '' || y1 === '' || y2 === '') {
         document.getElementById('distance-solution').style.color = '#ff0000';
         document.getElementById('distance-solution').innerHTML = 'Missing Values';
@@ -71,16 +64,12 @@ function distance() {
         document.getElementById('distance-solution').style.color = '#000000';
         document.getElementById('distance-solution').innerHTML = Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
     }
->>>>>>> bcc3b41b81772487a28960823c93a61232f696a9
 }
 function clearDistance() {
     document.getElementById('x1').value = '';
     document.getElementById('x2').value = '';
     document.getElementById('y1').value = '';
     document.getElementById('y2').value = '';
-<<<<<<< HEAD
->>>>>>> 1949e1d79e2c84933c834a219c30751a62bd4c86
-=======
     document.getElementById('distance-solution').innerHTML = '';
->>>>>>> bcc3b41b81772487a28960823c93a61232f696a9
+    document.getElementById('distance-solution').innerHTML = '';
 }
