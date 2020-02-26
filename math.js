@@ -48,7 +48,7 @@ function parametric(x1,y1,x2,y2,t) {
         ftd = '-t';
     }
     return '(' + x1 + b + ftb + ', ' + y1 + d + ftd + ')';
-
+}
 //distance formula
 function distance() {
     var x1, x2, y1, y2;
