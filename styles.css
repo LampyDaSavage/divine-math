@@ -54,6 +54,30 @@ input[type=number] {
     font-size: 19px;
     line-height: 1.6;
 }
+table {
+    border-spacing: 20px;
+}
+.calculator-link {
+    display: table-cell;
+    position: relative;
+    bottom: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #bbbbbb;
+    width: 30%;
+    min-width: 200px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    transition: bottom 0.25s;
+}
+.calculator-link:hover {
+    bottom: 5px;
+}
+.calculator-img {
+    width: 100%;
+}
+
 /* navbar */
 .navbar h1 {
     float: left;
