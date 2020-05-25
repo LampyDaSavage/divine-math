@@ -16,6 +16,8 @@ function roundDecimal4(x) {
 }
 
 //Algebra Multistep Functions
+
+//Pythagorean Function
 function pythag() {
     var a, b, c, sol;
     a = document.getElementById('a').value;
@@ -52,6 +54,7 @@ function resetPythag() {
     document.getElementById('pythag-sol').innerHTML = '';
 }
 
+//Distance Formula Function
 function distance() {
     var x1, x2, y1, y2, sol;
     x1 = document.getElementById('x1').value;
@@ -76,6 +79,8 @@ function resetDistance() {
 }
 
 //Pre-Calculus Multistep Functions
+
+//Parametrics Function
 function parametrics() {
     var x1, y1, t1, x2, y2, t2, sol;
     x1 = document.getElementById('x1').value;
@@ -144,6 +149,7 @@ function resetParametrics() {
     document.getElementById('parametrics-sol').innerHTML = '';
 }
 
+//Quadratic Function
 function quadratic() {
     var a, b, c, sol;
     a = document.getElementById('a').value;
@@ -173,6 +179,7 @@ function resetQuadratic() {
 
 //simple area
 
+//Area of Square
 function areaSquare() {
     var s, sol;
     s = document.getElementById('s').value;
@@ -196,6 +203,7 @@ function resetAreaSquare() {
     document.getElementById('area-square-sol').innerHTML = '';
 }
 
+//Area of Rectangle
 function areaRect() {
     var l, w, sol;
     l = document.getElementById('l').value;
@@ -221,6 +229,7 @@ function resetAreaRect() {
     document.getElementById('area-rect-sol').innerHTML = '';
 }
 
+//Area of Triangle
 function areaTriangle() {
     var b, h, sol;
     b = document.getElementById('b').value;
@@ -243,6 +252,7 @@ function resetAreaTriangle() {
     document.getElementById('area-triangle-sol').innerHTML = '';
 }
 
+//Area of Trapezoid
 function areaTrap() {
     var b1, b2, h, sol;
     b1 = document.getElementById('b1').value;
@@ -270,6 +280,7 @@ function resetAreaTrap() {
     document.getElementById('area-trap-sol').innerHTML = '';
 }
 
+//Area of Circle
 function areaCircle() {
     var r, sol;
     r = document.getElementById('r').value;
@@ -295,6 +306,7 @@ function resetAreaCircle() {
 
 //surface area
 
+//Surface Area of Cube
 function surfaceCube() {
     var s, sol;
     s = document.getElementById('s').value;
@@ -318,6 +330,7 @@ function resetSurfaceCube() {
     document.getElementById('surface-cube-sol').innerHTML = '';
 }
 
+//Surface Area of Rectangle
 function surfaceRectP() {
     var l, w, h, sol;
     l = document.getElementById('l').value;
@@ -345,11 +358,12 @@ function resetSurfaceRectP() {
     document.getElementById('surface-rect-p-sol').innerHTML = '';
 }
 
+//Surface Area of Triangular Prism (INCOMPLETE)
 function surfaceTriangularP() {
     var b, h, sol;
     b = document.getElementById('b').value;
     h = document.getElementById('h').value;
     sol = document.getElementById('surface-triangular-p-sol');
     
-    )
+
 }
