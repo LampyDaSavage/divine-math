@@ -71,40 +71,69 @@ function resetDistance() {
 }
 
 //Pre-Calculus Multistep Functions
-function parametric(x1,y1,x2,y2,t) {
-    b = (x2-x1)/t;
-    d = (y2-y1)/t;
-    ftb = 't';
-    ftd = 't';
-    if(x1 === 0) {
-        x1 = '';
+function parametrics() {
+    var x1, y1, t1, x2, y2, t2;
+    x1 = document.getElementById('x1').value;
+    y1 = document.getElementById('y1').value;
+    t1 = document.getElementById('t1').value;
+    x2 = document.getElementById('x2').value;
+    y2 = document.getElementById('y2').value;
+    t2 = document.getElementById('t2').value;
+    if(x1 === '' || y1 === '' || x2 === '' || y2 === '' || t2 === '') {
+        document.getElementById('parametrics-solution').style.color = '#ff0000';
+        document.getElementById('parametrics-solution').innerHTML = 'Missing values'
+    } else if(t1 != 0 || t1 != '') {
+        document.getElementById('parametrics-solution').style.color = '#ff0000';
+        document.getElementById('parametrics-solution').innerHTML = 'The time at the first point must be 0';
+    } else {
+        b = (x2-x1)/t2;
+        d = (y2-y1)/t2;
+        ftb = 't';
+        ftd = 't';
+        if(x1 === 0) {
+            x1 = '';
+        }
+        if(y1 === 0) {
+            y1 = '';
+        }
+        if(b > 0) {
+            b = ' + ' + b;
+        } else if(b < 0) {
+            b = ' - ' + Math.abs(b);
+        } else if(b === 0) {
+            b = '';
+            ftb = '';
+        } else if(b === 1) {
+            b = '';
+            ftb = ' + t';
+        } else if(b === -1) {
+            b = '';
+            ftb = ' - t';
+        }
+        if(d > 0) {
+            d = ' + ' + d;
+        } else if(d < 0) {
+            d = ' - ' + Math.abs(d);
+        } else if(d === 0) {
+            d = '';
+            ftd = '';
+        } else if(d === 1) {
+            d = '';
+            ftd = ' + t';
+        } else if(d === -1) {
+            d = '';
+            ftd = ' - t';
+        }
+        document.getElementById('parametrics-solution').style.color = '#000000';
+        document.getElementById('parametrics-solution').innerHTML = '( ' + x1 + b + ftb + ' , ' + y1 + d + ftd + ' )';
     }
-    if(y1 === 0) {
-        y1 = '';
-    }
-    if(b>0) {
-        b = '+' + b;
-    } else if(b === 0) {
-        b = '';
-        ftb = '';
-    } else if(b === 1) {
-        b = '';
-        ftb = '+t';
-    } else if(b === -1) {
-        b = '';
-        ftb = '-t';
-    }
-    if(d>0) {
-        d = '+' + d;
-    } else if(d === 0) {
-        d = '';
-        ftd = '';
-    } else if(d === 1) {
-        d = '';
-        ftd = '+t';
-    } else if(d === -1) {
-        d = '';
-        ftd = '-t';
-    }
-    return '(' + x1 + b + ftb + ', ' + y1 + d + ftd + ')';
+}
+function resetParametrics() {
+    document.getElementById('x1').value = '';
+    document.getElementById('y1').value = '';
+    document.getElementById('t1').value = '';
+    document.getElementById('x2').value = '';
+    document.getElementById('y2').value = '';
+    document.getElementById('t2').value = '';
+    document.getElementById('parametrics-solution').innerHTML = '';
 }
