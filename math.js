@@ -37,14 +37,14 @@ function pythag() {
         } else {
             sol.style.color = '#000000';
             if(a === '' || a === null) {
-                sol.innerHTML = Math.sqrt(Math.pow(c,2) - Math.pow(b,2));
+                sol.innerHTML = 'Side 1 (a): ' + Math.sqrt(Math.pow(c,2) - Math.pow(b,2));
             } else if(b === '' || b === null) {
-                sol.innerHTML = Math.sqrt(Math.pow(c,2) - Math.pow(a,2));
+                sol.innerHTML = 'Side 2 (b): ' + Math.sqrt(Math.pow(c,2) - Math.pow(a,2));
             }
         }
     } else {
         sol.style.color = '#000000';
-        sol.innerHTML = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+        sol.innerHTML = 'Hypotenuse (c): ' + Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
     }
 }
 function resetPythag() {
@@ -78,6 +78,30 @@ function resetDistance() {
     document.getElementById('distance-sol').innerHTML = '';
 }
 
+//Trignometry Functions
+
+//Finding the Side or Angle of a Right Triangle using Trignometric Functions
+function sideAngleWithTrigFunc() {
+    var a, b, c, A, B, C, sol;
+    a = document.getElementById('a').value;
+    b = document.getElementById('b').value;
+    c = document.getElementById('c').value;
+    A = document.getElementById('A').value;
+    B = document.getElementById('B').value;
+    C = document.getElementById('C').value;
+    sol = document.getElementById('sideAngleWithTrigFunc-sol');
+    
+}
+
+function resetSideAngleWithTrigFunc() {
+    document.getElementById('a').value = '';
+    document.getElementById('b').value = '';
+    document.getElementById('c').value = '';
+    document.getElementById('A').value = '';
+    document.getElementById('B').value = '';
+    document.getElementById('C').value = '';
+    document.getElementById('sideAngleWithTrigFunc-sol').innerHTML = '';
+}
 //Pre-Calculus Multistep Functions
 
 //Parametrics Function
@@ -364,6 +388,4 @@ function surfaceTriangularP() {
     b = document.getElementById('b').value;
     h = document.getElementById('h').value;
     sol = document.getElementById('surface-triangular-p-sol');
-    
-
 }
