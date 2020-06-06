@@ -88,9 +88,22 @@ function sideAngleWithTrigFunc() {
     c = document.getElementById('c').value;
     A = document.getElementById('A').value;
     B = document.getElementById('B').value;
-    C = document.getElementById('C').value;
     sol = document.getElementById('sideAngleWithTrigFunc-sol');
-    
+    if(a != '' && b != '' && A != '') {
+        if(a === 'x') {
+            sol.style.color = '#000000';
+            var deg = A * Math.PI/180;
+            sol.innerHTML = b * Math.tan(deg);
+        } else if(b === 'x') {
+            sol.style.color = '#000000';
+            var deg = A * Math.PI/180;
+            sol.innerHTML = a/Math.tan(deg);
+        } else if(A === 'x') { //Please check this loop here, its printing the value of deg rather than the inverse tangent of it. The previous conversion is for rad to deg purposes.
+            sol.style.color = '#000000';
+            var deg = (a/b)*Math.PI/180;
+            sol.innerHTML = Math.atan(deg);
+        }
+    }
 }
 
 function resetSideAngleWithTrigFunc() {
@@ -99,7 +112,6 @@ function resetSideAngleWithTrigFunc() {
     document.getElementById('c').value = '';
     document.getElementById('A').value = '';
     document.getElementById('B').value = '';
-    document.getElementById('C').value = '';
     document.getElementById('sideAngleWithTrigFunc-sol').innerHTML = '';
 }
 //Pre-Calculus Multistep Functions
