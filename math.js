@@ -82,26 +82,87 @@ function resetDistance() {
 
 //Finding the Side or Angle of a Right Triangle using Trignometric Functions
 function sideAngleWithTrigFunc() {
-    var a, b, c, A, B, C, sol;
+    var a, b, c, A, B, angleAFromRadToDeg, angleBFromRadToDeg, sol;
     a = document.getElementById('a').value;
     b = document.getElementById('b').value;
     c = document.getElementById('c').value;
     A = document.getElementById('A').value;
     B = document.getElementById('B').value;
+    angleAFromRadToDeg = A*Math.PI/180;
+    angleBFromRadToDeg = B*Math.PI/180;
     sol = document.getElementById('sideAngleWithTrigFunc-sol');
+
     if(a != '' && b != '' && A != '') {
         if(a === 'x') {
             sol.style.color = '#000000';
-            var deg = A * Math.PI/180;
-            sol.innerHTML = b * Math.tan(deg);
+            sol.innerHTML = b*Math.tan(angleAFromRadToDeg);
         } else if(b === 'x') {
             sol.style.color = '#000000';
-            var deg = A * Math.PI/180;
-            sol.innerHTML = a/Math.tan(deg);
-        } else if(A === 'x') { //Please check this loop here, its printing the value of deg rather than the inverse tangent of it. The previous conversion is for rad to deg purposes.
+            sol.innerHTML = a/Math.tan(angleAFromRadToDeg);
+        } else if(A === 'x') {
             sol.style.color = '#000000';
-            var deg = (a/b)*Math.PI/180;
-            sol.innerHTML = Math.atan(deg);
+            var radOne = Math.atan(a/b);
+            sol.innerHTML = radOne*180/Math.PI;
+        }
+    } else if(a != '' && b != '' && B != '') {
+        if(a === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = b/Math.tan(angleBFromRadToDeg);
+        } else if(b === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = a*Math.tan(angleBFromRadToDeg);
+        } else if(B === 'x') {
+            sol.style.color = '#000000';
+            var radTwo = Math.atan(b/a);
+            sol.innerHTML = radTwo*180/Math.PI;
+        }
+    } else if(a != '' && c != '' && A != '') {
+        if(a === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = c*Math.sin(angleAFromRadToDeg);
+        } else if(c === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = a/Math.sin(angleAFromRadToDeg);
+        } else if(A === 'x') {
+            sol.style.color = '#000000';
+            var radThree = Math.asin(a/c);
+            sol.innerHTML = radThree*180/Math.PI;
+        }
+    } else if(a != '' && c != '' && B != '') {
+        if(a === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = c*Math.cos(angleBFromRadToDeg);
+        } else if(c === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = a/Math.cos(angleBFromRadToDeg);
+        } else if(B === 'x') {
+            sol.style.color = '#000000';
+            var radFour = Math.acos(a/c);
+            sol.innerHTML = radFour*180/Math.PI;
+        }
+    } else if(b != '' && c != '' && A != '') {
+        if(b === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = c*Math.cos(angleAFromRadToDeg); 
+        } else if(c === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = b/Math.cos(angleAFromRadToDeg);
+        } else if(A === 'x') {
+            sol.style.color = '#000000';
+            var radFive = Math.acos(b/c);
+            sol.innerHTML = radFive*180/Math.PI;
+        }
+    } else if(b != '' && c != '' && B != '') {
+        if(b === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = c*Math.sin(angleBFromRadToDeg);
+        } else if(c === 'x') {
+            sol.style.color = '#000000';
+            sol.innerHTML = b/Math.sin(angleBFromRadToDeg);
+        } else if(B === 'x') {
+            sol.style.color = '#000000';
+            var RadSix = Math.asin(b/c);
+            sol.innerHTML = radSix*180/Math.PI;
         }
     }
 }
