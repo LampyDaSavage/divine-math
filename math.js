@@ -103,6 +103,9 @@ function sideAngleWithTrigFunc() {
             sol.style.color = '#000000';
             var radOne = Math.atan(a/b);
             sol.innerHTML = radOne*180/Math.PI;
+        } else {
+            sol.style.color = '#ff0000';
+            sol.innerHTML = 'There is no x value to solve for!'
         }
     } else if(a != '' && b != '' && B != '') {
         if(a === 'x') {
@@ -115,6 +118,9 @@ function sideAngleWithTrigFunc() {
             sol.style.color = '#000000';
             var radTwo = Math.atan(b/a);
             sol.innerHTML = radTwo*180/Math.PI;
+        } else {
+            sol.style.color = '#ff0000';
+            sol.innerHTML = 'There is no x value to solve for!'
         }
     } else if(a != '' && c != '' && A != '') {
         if(a === 'x') {
@@ -127,6 +133,9 @@ function sideAngleWithTrigFunc() {
             sol.style.color = '#000000';
             var radThree = Math.asin(a/c);
             sol.innerHTML = radThree*180/Math.PI;
+        } else {
+            sol.style.color = '#ff0000';
+            sol.innerHTML = 'There is no x value to solve for!'
         }
     } else if(a != '' && c != '' && B != '') {
         if(a === 'x') {
@@ -139,6 +148,9 @@ function sideAngleWithTrigFunc() {
             sol.style.color = '#000000';
             var radFour = Math.acos(a/c);
             sol.innerHTML = radFour*180/Math.PI;
+        } else {
+            sol.style.color = '#ff0000';
+            sol.innerHTML = 'There is no x value to solve for!'
         }
     } else if(b != '' && c != '' && A != '') {
         if(b === 'x') {
@@ -151,6 +163,9 @@ function sideAngleWithTrigFunc() {
             sol.style.color = '#000000';
             var radFive = Math.acos(b/c);
             sol.innerHTML = radFive*180/Math.PI;
+        } else {
+            sol.style.color = '#ff0000';
+            sol.innerHTML = 'There is no x value to solve for!'
         }
     } else if(b != '' && c != '' && B != '') {
         if(b === 'x') {
@@ -163,7 +178,13 @@ function sideAngleWithTrigFunc() {
             sol.style.color = '#000000';
             var RadSix = Math.asin(b/c);
             sol.innerHTML = radSix*180/Math.PI;
+        } else {
+            sol.style.color = '#ff0000';
+            sol.innerHTML = 'There is no x value to solve for!'
         }
+    } else {
+        sol.style.color = '#ff0000';
+        sol.innerHTML = 'This calculator does not function unless you have two sides and an angle with one being x to solve for.'
     }
 }
 
