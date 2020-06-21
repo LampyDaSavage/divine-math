@@ -284,7 +284,7 @@ function quadratic() {
         if(isNaN(sol1) && isNaN(sol2)) {
             sol.innerHTML = 'No solution';
         } else {
-            sol.innerHTML =  sol1 + ' & ' + sol2;
+            sol.innerHTML = 'x = ' + sol1 + ' & ' + sol2;
         }
     }
 }
