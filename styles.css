@@ -97,6 +97,11 @@ table {
 .calculator-img {
     width: 100%;
 }
+.background {
+    background-image: url("images/index-background.png");
+    background-size: cover;
+    background-position: center;
+}
 
 /* navbar */
 .navbar h1 {
