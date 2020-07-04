@@ -31,16 +31,18 @@ function pythag() {
         sol.style.color = '#ff0000';
         sol.innerHTML = 'All sides are already known';
     } else if(c != '') {
-        if(a > c || b > c) {
+        if(a === '' && b >= c) {
             sol.style.color = '#ff0000';
-            sol.innerHTML = 'Hypotenuse (c) cannot be less than the other sides (a & b)';
-        } else {
+            sol.innerHTML = 'Hypotenuse (c) cannot be less than or equal to the other sides (a & b)';
+        } else if(a === '' && b < c) {
             sol.style.color = '#000000';
-            if(a === '' || a === null) {
-                sol.innerHTML = 'Side 1 (a): ' + Math.sqrt(Math.pow(c,2) - Math.pow(b,2));
-            } else if(b === '' || b === null) {
-                sol.innerHTML = 'Side 2 (b): ' + Math.sqrt(Math.pow(c,2) - Math.pow(a,2));
-            }
+            sol.innerHTML = 'Side 1 (a): ' + Math.sqrt(Math.pow(c,2) - Math.pow(b,2));
+        } else if(b === '' && a >= c) {
+            sol.style.color = '#ff0000';
+            sol.innerHTML = 'Hypotenuse (c) cannot be less than or equal to the other sides (a & b)';
+        } else if(b === '' && a < c) {
+            sol.style.color = '#000000';
+            sol.innerHTML = 'Side 2 (b): ' + Math.sqrt(Math.pow(c,2) - Math.pow(a,2));
         }
     } else {
         sol.style.color = '#000000';
