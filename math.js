@@ -24,23 +24,26 @@ function pythag() {
     b = document.getElementById('b').value;
     c = document.getElementById('c').value;
     sol = document.getElementById('pythag-sol');
-    if(a === '' && b === '' || b === '' && c === '' || a === '' && c === '' || a === '' && b === '' && c === '') {
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+    if(isNaN(a) === true && isNaN(b) === true || isNaN(b) === true && isNaN(c) === true || isNaN(a) === true && isNaN(c) === true || isNaN(a) === true && isNaN(b) === true && isNaN(c) === true) {
         sol.style.color = '#ff0000';
         sol.innerHTML = 'Missing values';
-    } else if(a !== '' && b !== '' && c !== '') {
+    } else if(isNaN(a) !== true && isNaN(b) !== true && isNaN(c) !== true) {
         sol.style.color = '#ff0000';
         sol.innerHTML = 'All sides are already known';
-    } else if(c != '') {
-        if(a === '' && b >= c) {
+    } else if(isNaN(c) != true) {
+        if(isNaN(a) === true && b >= c) {
             sol.style.color = '#ff0000';
             sol.innerHTML = 'Hypotenuse (c) cannot be less than or equal to the other sides (a & b)';
-        } else if(a === '' && b < c) {
+        } else if(isNaN(a) === true && b < c) {
             sol.style.color = '#000000';
             sol.innerHTML = 'Side 1 (a): ' + Math.sqrt(Math.pow(c,2) - Math.pow(b,2));
-        } else if(b === '' && a >= c) {
+        } else if(isNaN(b) === true && a >= c) {
             sol.style.color = '#ff0000';
             sol.innerHTML = 'Hypotenuse (c) cannot be less than or equal to the other sides (a & b)';
-        } else if(b === '' && a < c) {
+        } else if(isNaN(b) === true && a < c) {
             sol.style.color = '#000000';
             sol.innerHTML = 'Side 2 (b): ' + Math.sqrt(Math.pow(c,2) - Math.pow(a,2));
         }
