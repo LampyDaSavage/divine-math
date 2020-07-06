@@ -157,7 +157,7 @@ function sideAngleWithTrigFunc() {
     } else if(b != '' && c != '' && A != '') {
         if(b === 'x') {
             sol.style.color = '#000000';
-            sol.innerHTML = c*Math.cos(angleAFromRadToDeg); 
+            sol.innerHTML = c*Math.cos(angleAFromRadToDeg);
         } else if(c === 'x') {
             sol.style.color = '#000000';
             sol.innerHTML = b/Math.cos(angleAFromRadToDeg);
@@ -312,7 +312,7 @@ function areaSquare() {
         sol.innerHTML = 'This square is nonexistent';
     } else if(s < 0) {
         sol.style.color = '#ff0000';
-        sol.innerHTML = 'Side lengths can not be negative'; 
+        sol.innerHTML = 'Side lengths can not be negative';
     } else {
         sol.style.color = '#000000';
         sol.innerHTML = Math.pow(s, 2);
