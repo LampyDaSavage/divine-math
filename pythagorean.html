@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Divine Math - Home</title>
+        <title>Divine Math - Pythagorean Theorem Calculator</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
@@ -29,16 +29,20 @@
                 </ul>
             </nav>
         </div>
-        <div class="title-section">
-            <img src="images/text-logo-white.png" alt="Divine Math" class="text-logo-title">
+        <div class="content" style="text-align: center">
+            <h1>Pythagorean Theorem</h1>
+            <br/>
+            <h3>Triangle Side Values</h3>
+            <p>Side 1 (a) = <input type="number" id="a"></p>
+            <p>Side 2 (b) = <input type="number" id="b"></p>
+            <p>Hypotenuse (c) = <input type="number" id="c"></p>
+            <input type="submit" onclick="pythag()" class="btn">
+            <input type="reset" onclick="resetPythag()" class="btn">
+            <br/><br/>
+            <h3 id="pythag-sol"></h3>
         </div>
-        <div class="content">
-            <h1>The Ultimate Mathematics Tool</h1>
-            <p>We're here to make math simple and easy. With our various specialized calculators you can spend less time doing the simple repetetive math which you already learned years ago and more time learning what's important. For use in the classroom or at home, Divine Math will give you a competive edge when completing math assignments and homework.</p>
-            <h1>Help Us Out</h1>
-            <p>Divine Math is still in its early stages of development and we have very limited staff. If you'd like to get involved, join our <a href="https://discord.gg/4cKE4CB">Discord server</a>! A simple referal to a friend also helps us out a lot since reaching a larger audience is key to our growth and success.</p>
-        </div>
-        <footer>
+        <!--Style on footer is temporary so that it appears at the bottom when the content section is empty or does not take up enough space (remove styling once content takes up more space than viewport and scrolling is enabled)-->
+        <footer style="position: fixed; bottom: 0; width: 100%">
             <div class="copyright">
                 <img src="images/logo.png" alt="Divine Math" class="footer-logo">
                 <p>Copyright &copy; 2020 Divine Math</p>
@@ -61,5 +65,6 @@
             </div>
         </footer>
         <script src="script.js"></script>
+        <script src="math.js"></script>
     </body>
 </html>
