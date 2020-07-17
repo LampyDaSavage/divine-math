@@ -281,7 +281,7 @@ function quadratic() {
     sol = document.getElementById('quadratic-sol');
     if(a === '' || b === '' || c === '') {
         sol.style.color = '#ff0000';
-        sol.innerHTML = 'Missing values'
+        sol.innerHTML = 'Missing Values'
     } else {
         sol.style.color = '#000000';
         sol1 = (-1*b + Math.sqrt(Math.pow(b, 2) - 4*a*c)) / (2*a);
@@ -300,6 +300,49 @@ function resetQuadratic() {
     document.getElementById('quadratic-sol').innerHTML = '';
 }
 
+//Advanced Circle Calculators
+function standEqOfCircle() {
+    var h, k, r, sol;
+    var superscript = '2';
+    h = document.getElementById('h').value;
+    k = document.getElementById('k').value;
+    r = document.getElementById('r').value;
+    sol = document.getElementById('circleEquation-sol');
+    if(h === '' || k === '' || r === '') {
+        sol.style.color = '#ff0000';
+        sol.innerHTML = 'Missing Values'
+    } else if(r < 0) {
+        sol.style.color = '#ff0000';
+        sol.innerHTML = 'Radius Cannot Be Negative'
+    } else if(h < 0 && k > 0) {
+        sol.style.color = '#000000';
+        sol.innerHTML = 'Standard Equation: (x + ' + Math.abs(h) + ')' + superscript.sup() + ' + (y - ' + k + ')' + superscript.sup() +  ' = ' + Math.pow(r,2);
+    } else if(h < 0 && k < 0) {
+        sol.style.color = '#000000';
+        sol.innerHTML = 'Standard Equation: (x + ' + Math.abs(h) + ')' + superscript.sup() + ' + (y + ' + Math.abs(k) + ')' + superscript.sup() + ' = ' + Math.pow(r,2);
+    } else if(h > 0 && k > 0) {
+        sol.style.color = '#000000';
+        sol.innerHTML = 'Standard Equation: (x - ' + h + ')' + superscript.sup() + ' + (y - ' + k + ')' + superscript.sup() + ' = ' + Math.pow(r,2);
+    } else if(h > 0 && k < 0) {
+        sol.style.color = '#000000';
+        sol.innerHTML = 'Standard Equation: (x - ' + h + ')' + superscript.sup() + ' + (y + ' + Math.abs(k) + ')' + superscript.sup() + ' = ' + Math.pow(r,2);
+    }
+}
+
+//Complicated Circle Calculators
+function completeSqrCircleEq() {
+    var input, sol;
+    input = document.getElementById('input');
+    sol.document.getElementById('completeSqrCircleEq-sol');
+    
+}
+
+//Reset Circle Equations
+function resetStandEqOfCircle() {
+    document.getElementById('h').value = '';
+    document.getElementById('k').value = '';
+    document.getElementById('r').value = '';
+}
 //simple area
 
 //Area of Square
