@@ -331,10 +331,17 @@ function standEqOfCircle() {
 
 //Complicated Circle Calculators
 function completeSqrCircleEq() {
-    var input, sol;
-    input = document.getElementById('input');
-    sol.document.getElementById('completeSqrCircleEq-sol');
-    
+    var inp, sol;
+    inp = document.getElementById('inp').value;
+    sol = document.getElementById('completeSqrCircleEq-sol');
+    if(inp === '') {
+        sol.style.color = '#ff0000';
+        sol.innerHTML = 'Please Enter an Equation'
+    } else {
+        var arr = inp.split('-').join(', ').split('+').join(', ');
+        sol.style.color = '#000000';
+        sol.innerHTML = arr.toString();
+    }
 }
 
 //Reset Circle Equations
@@ -342,6 +349,12 @@ function resetStandEqOfCircle() {
     document.getElementById('h').value = '';
     document.getElementById('k').value = '';
     document.getElementById('r').value = '';
+    document.getElementById('circleEquation-sol').innerHTML = '';
+}
+
+function resetcompleteSqrCircleEq() {
+    document.getElementById('inp').value = '';
+    document.getElementById('completeSqrCircleEq-sol').innerHTML = '';
 }
 //simple area
 
