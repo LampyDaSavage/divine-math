@@ -337,11 +337,29 @@ function completeSqrCircleEq() {
     if(inp === '') {
         sol.style.color = '#ff0000';
         sol.innerHTML = 'Please Enter an Equation'
+    } else if(inp.indexOf(' ') >= 0) {
+        sol.style.color = '#ff0000';
+        sol.innerHTML = 'Cannot Have Spaces'
     } else {
-        var arr = inp.split('-').join(', ').split('+').join(', ');
-        sol.style.color = '#000000';
-        sol.innerHTML = arr.toString();
-    }
+        if(inp.indexOf('-') >= 0) {
+            var arr = inp.split('-').join(',').split('+').join(',');
+            var strArr = arr.toString();
+            while(strArr.indexOf('^2') >= 0) {
+                var asthticArr = strArr.replace('^2', '2'.sup())
+                strArr = asthticArr;
+                sol.style.color = '#000000';
+                sol.innerHTML = asthticArr;
+            }
+        } else if(inp.indexOf('-') === -1) {
+            var arr1 = inp.split('+');
+            var arr1 = arr1.toString();
+            while(arr1.indexOf('^2') >= 0) {
+                var arr1 = arr1.replace('^2', '2'.sup());
+            }
+            sol.style.color = '#000000';
+            sol.innerHTML = arr1;
+        } 
+    }          
 }
 
 //Reset Circle Equations
