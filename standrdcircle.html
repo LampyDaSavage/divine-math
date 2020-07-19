@@ -7,6 +7,15 @@
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173038061-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-173038061-1');
+        </script>
     </head>
     <body>
         <div class="navbar">
@@ -33,9 +42,9 @@
             <h1>Circles</h1>
             <br/>
             <h3>Please Enter with No Spaces</h3>
-            <p>Equation: <input type="text" id="inp"></p>
+            <p>Equation: <input type="text" id="inp"> = 0</p>
             <input type="submit" onclick="completeSqrCircleEq()" class="btn">
-            <input type="reset" onclick="resetStandEqOfCircle()" class="btn">
+            <input type="reset" onclick="resetcompleteSqrCircleEq()" class="btn">
             <br/><br/>
             <h3 id="completeSqrCircleEq-sol"></h3>
         </div>
