@@ -38,41 +38,39 @@
                 </ul>
             </nav>
         </div>
-        <div class="content" style="text-align: center">
-            <h1>Pythagorean Theorem</h1>
-            <br/>
-            <h3>Triangle Side Values</h3>
-            <p>Side 1 (a) = <input type="number" id="a"></p>
-            <p>Side 2 (b) = <input type="number" id="b"></p>
-            <p>Hypotenuse (c) = <input type="number" id="c"></p>
-            <input type="submit" onclick="pythag()" class="btn">
-            <input type="reset" onclick="resetPythag()" class="btn">
-            <br/><br/>
-            <h3 id="pythag-sol"></h3>
+        <div onclick="clickOffHideNav()">
+            <div class="content" style="text-align: center">
+                <h1>Pythagorean Theorem</h1>
+                <br/>
+                <h3>Triangle Side Values</h3>
+                <p>Side 1 (a) = <input type="number" id="a"></p>
+                <p>Side 2 (b) = <input type="number" id="b"></p>
+                <p>Hypotenuse (c) = <input type="number" id="c"></p>
+                <input type="submit" onclick="pythag()" class="btn">
+                <input type="reset" onclick="resetPythag()" class="btn">
+                <br/><br/>
+                <h3 id="pythag-sol"></h3>
+            </div>
+            <!--Style on footer is temporary so that it appears at the bottom when the content section is empty or does not take up enough space (remove styling once content takes up more space than viewport and scrolling is enabled)-->
+            <footer>
+                <div class="copyright">
+                    <img src="images/logo.png" alt="Divine Math" class="footer-logo">
+                    <p>Copyright &copy; 2020 Divine Math</p>
+                </div>
+                <div class="footer-social-section">
+                    <a href="https://discord.gg/4cKE4CB" target="_blank"><img src="images/discord-logo.png" alt="Discord" class="footer-social"></a>
+                    <a href="https://www.instagram.com/divine_math/" target="_blank"><img src="images/instagram-logo.png" target="_blank" alt="Instagram" class="footer-social"></a>
+                    <a href="https://twitter.com/math_is_divine" target="_blank"><img src="images/twitter-logo.png" target="_blank" alt="Twitter" class="footer-social"></a>
+                    <!--<a href="#" target="_blank"><img src="images/facebook-logo.png" target="_blank" alt="Facebook" class="footer-social"></a>-->
+                </div>
+                <div class="footer-links">
+                    <a href="termsOfService.html"><u>Terms Of Service</u></a>
+                    <a href="privacyPolicy.html"><u>Privacy Policy</u></a>
+                    <!--<a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>-->
+                </div>
+            </footer>
         </div>
-        <!--Style on footer is temporary so that it appears at the bottom when the content section is empty or does not take up enough space (remove styling once content takes up more space than viewport and scrolling is enabled)-->
-        <footer style="position: fixed; bottom: 0; width: 100%">
-            <div class="copyright">
-                <img src="images/logo.png" alt="Divine Math" class="footer-logo">
-                <p>Copyright &copy; 2020 Divine Math</p>
-            </div>
-            <div class="tos">
-                <a href="termsOfService.html"><li><u>Terms Of Service</u></li></a>
-            </div>
-            <div class="privacy-policy">
-                <a href="privacyPolicy.html"><li><u>Privacy Policy</u></li></a>
-            </div>
-            <div class="footer-social-section">
-				<a href="https://discord.gg/4cKE4CB" target="_blank"><img src="images/discord-logo.png" alt="Discord" class="footer-social"></a>
-				<a href="https://www.instagram.com/divine_math/" target="_blank"><img src="images/instagram-logo.png" target="_blank" alt="Instagram" class="footer-social"></a>
-				<a href="https://twitter.com/math_is_divine" target="_blank"><img src="images/twitter-logo.png" target="_blank" alt="Twitter" class="footer-social"></a>
-				<!--<a href="#" target="_blank"><img src="images/facebook-logo.png" target="_blank" alt="Facebook" class="footer-social"></a>-->
-			</div>
-            <div class="footer-links">
-                <!--<a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>-->
-            </div>
-        </footer>
         <script src="script.js"></script>
         <script src="math.js"></script>
     </body>

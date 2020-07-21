@@ -38,44 +38,42 @@
                 </ul>
             </nav>
         </div>
-        <div class="content" style="text-align: center">
-            <h1>Trigonometric Functions of Right Triangles</h1>
-            <br/>
-            <h3>Side Values</h3>
-            <p>Side (a): <input type="text" id="a"></p>
-            <p>Side (b): <input type="text" id="b"></p>
-            <p>Side (c): <input type="text" id="c"></p>
-            <h3>Angle Values</h3>
-            <p>Angle (A): <input type="text" id="A"></p>
-            <p>Angle (B): <input type="text" id="B"></p>
-            <input type="submit" onclick="sideAngleWithTrigFunc()" class="btn">
-            <input type="reset" onclick="resetSideAngleWithTrigFunc()" class="btn">
-            <br/><br/>
-            <h3 id="sideAngleWithTrigFunc-sol"></h3>
+        <div onclick="clickOffHideNav()">
+            <div class="content" style="text-align: center">
+                <h1>Trigonometric Functions of Right Triangles</h1>
+                <br/>
+                <h3>Side Values</h3>
+                <p>Side (a): <input type="text" id="a"></p>
+                <p>Side (b): <input type="text" id="b"></p>
+                <p>Side (c): <input type="text" id="c"></p>
+                <h3>Angle Values</h3>
+                <p>Angle (A): <input type="text" id="A"></p>
+                <p>Angle (B): <input type="text" id="B"></p>
+                <input type="submit" onclick="sideAngleWithTrigFunc()" class="btn">
+                <input type="reset" onclick="resetSideAngleWithTrigFunc()" class="btn">
+                <br/><br/>
+                <h3 id="sideAngleWithTrigFunc-sol"></h3>
+            </div>
+            <!--Style is temporary, only here if the webpage isn't completely filled with something and cannot automatically go to the bottom-->
+            <footer>
+                <div class="copyright">
+                    <img src="images/logo.png" alt="Divine Math" class="footer-logo">
+                    <p>Copyright &copy; 2020 Divine Math</p>
+                </div>
+                <div class="footer-social-section">
+                    <a href="https://discord.gg/4cKE4CB" target="_blank"><img src="images/discord-logo.png" alt="Discord" class="footer-social"></a>
+                    <a href="https://www.instagram.com/divine_math/" target="_blank"><img src="images/instagram-logo.png" target="_blank" alt="Instagram" class="footer-social"></a>
+                    <a href="https://twitter.com/math_is_divine" target="_blank"><img src="images/twitter-logo.png" target="_blank" alt="Twitter" class="footer-social"></a>
+                    <!--<a href="#" target="_blank"><img src="images/facebook-logo.png" target="_blank" alt="Facebook" class="footer-social"></a>-->
+                </div>
+                <div class="footer-links">
+                    <a href="termsOfService.html"><u>Terms Of Service</u></a>
+                    <a href="privacyPolicy.html"><u>Privacy Policy</u></a>
+                    <!--<a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>-->
+                </div>
+            </footer>
         </div>
-        <!--Style is temporary, only here if the webpage isn't completely filled with something and cannot automatically go to the bottom-->
-        <footer style="position: fixed; bottom: 0; width: 100%">
-            <div class="copyright">
-                <img src="images/logo.png" alt="Divine Math" class="footer-logo">
-                <p>Copyright &copy; 2020 Divine Math</p>
-            </div>
-            <div class="tos">
-                <a href="termsOfService.html"><li><u>Terms Of Service</u></li></a>
-            </div>
-            <div class="privacy-policy">
-                <a href="privacyPolicy.html"><li><u>Privacy Policy</u></li></a>
-            </div>
-            <div class="footer-social-section">
-				<a href="https://discord.gg/4cKE4CB" target="_blank"><img src="images/discord-logo.png" alt="Discord" class="footer-social"></a>
-				<a href="https://www.instagram.com/divine_math/" target="_blank"><img src="images/instagram-logo.png" target="_blank" alt="Instagram" class="footer-social"></a>
-				<a href="https://twitter.com/math_is_divine" target="_blank"><img src="images/twitter-logo.png" target="_blank" alt="Twitter" class="footer-social"></a>
-				<!--<a href="#" target="_blank"><img src="images/facebook-logo.png" target="_blank" alt="Facebook" class="footer-social"></a>-->
-			</div>
-            <div class="footer-links">
-                <!--<a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>-->
-            </div>
-        </footer>
         <script src="script.js"></script>
         <script src="math.js"></script>
     </body>
