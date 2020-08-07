@@ -1,4 +1,5 @@
 //decimal formating
+// These functions dont return anything but keeping in case they are needed later
 function roundDecimal0(x) {
     x = Math.round(x);
 }
@@ -14,6 +15,10 @@ function roundDecimal3(x) {
 function roundDecimal4(x) {
     x = Math.round(x*10000)/10000;
 }
+
+// Rounding function
+
+const roundDecimal = (num, places) => num.toFixed(places);
 
 //Algebra Multistep Functions
 
