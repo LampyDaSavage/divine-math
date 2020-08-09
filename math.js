@@ -567,3 +567,45 @@ function surfaceTriangularP() {
     h = document.getElementById('h').value;
     sol = document.getElementById('surface-triangular-p-sol');
 }
+
+// calculus
+
+class MathFunction {
+    
+    constructor(func) { // constructor
+        this.func = func
+    }
+    
+    // class properties
+    get dx() {
+        return this.dx;
+    }
+    
+    set dx(num) {
+        this.dx = num;
+    }
+    
+    num_integral(lower_bound, upper_bound) {
+    
+        let sum = 0;
+        
+        for (let i=lower_bound+this.dx; i <= upper_bound; i += this.dx) { // trapezoid rule integration
+            let i_0 = i-this.dx;
+            sum += ((this.func(i)+this.func(i_0))/2)*dx
+        }
+        
+        return sum;
+        
+    }
+    
+    num_derivative(x) {
+        
+        let epilson = 0.000001;
+        
+        return (this.func(x+epilson) - this.func(x))/epilson;
+        
+    }
+    
+}
+
+
