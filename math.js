@@ -605,7 +605,12 @@ class MathFunction {
         return (this.func(x+epilson) - this.func(x))/epilson;
         
     }
+
+    function integrate() { // returns the integral as a function
+        return function(x) { return this.num_integral(0,x); };
+    }
     
 }
+
 
 
