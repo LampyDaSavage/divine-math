@@ -606,8 +606,14 @@ class MathFunction {
         
     }
 
-    function integrate() { // returns the integral as a function
+    function integrate() { // returns the integral as a function (only works in the positive domain)
         return function(x) { return this.num_integral(0,x); };
+    }
+    
+    function differentiate() {
+        
+        return function(x) { return this.num_derivative(x); };
+        
     }
     
 }
